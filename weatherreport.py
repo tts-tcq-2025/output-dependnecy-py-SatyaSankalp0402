@@ -8,6 +8,13 @@ def sensorStub():
         'windSpeedKMPH': 52
     }
 
+def sensorStub1():
+    return {
+        'temperatureInC': 20,
+        'precipitation': 50,
+        'humidity': 26,
+        'windSpeedKMPH': 52
+    }
 
 def report(sensorReader):
     readings = sensorReader()
@@ -23,8 +30,11 @@ def report(sensorReader):
 
 def testRainy():
     weather = report(sensorStub)
+    weather1= report(sensorStub1)
     print(weather)
+    print(weather1)
     assert("rain" in weather)
+    assert("rain" in weather1)
 
 
 def testHighPrecipitation():
