@@ -36,4 +36,6 @@ def test_print_output_format(capsys):
     assert '(' not in captured, "Output contains tuple representation"
     assert ',' not in captured, "Output contains tuple commas"
     assert "White" in captured and "Blue" in captured, "Expected colors not found"
-
+test_get_color_pairs_length()
+test_color_pair_format()
+test_print_output_format()
